@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shahzuu - Web Developer Personal Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* ...All CSS same as earlier... */
+    body { margin: 0; font-family: sans-serif; background: #e7f3f7;}
+    .container { max-width: 1100px; margin: auto; background: #f8fcff; border-radius: 18px; box-shadow: 0 2px 20px #aeccd8; padding: 32px;}
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 24px 0;}
+    .logo { font-size: 2rem; font-weight: bold; color: #188186;}
+    ul { list-style: none; display: flex; gap: 30px; margin: 0; padding: 0;}
+    ul li { font-size: 1rem; color: #1c3c50; cursor: pointer;}
+    .btn { background: #188186; color: #fff; border: none; padding: 14px 32px; border-radius: 8px; cursor: pointer; font-size: 1rem;}
+    .hero { display: flex; align-items: center; gap: 70px; margin-top: 50px;}
+    .hero-content { flex: 1;}
+    .hero-title { font-size: 2.5rem; font-weight: bold; color: #0d3e4c;}
+    .hero-bio { font-size: 1.2rem; color: #228892; margin-top: 15px;}
+    .hero-desc { margin-top: 18px; color: #2e4a56;}
+    .hero-btns { margin-top: 32px;}
+    .hero-btns .btn { margin-right: 20px;}
+    .circle-img { width: 240px; height: 240px; border-radius: 50%; background: #18818622; border: 8px solid #18818644; overflow: hidden; display: flex; align-items: center; justify-content: center;}
+    .circle-img img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%;}
+    .about { margin-top: 80px; padding: 50px; background: #eef8fa; border-radius: 18px;}
+    .about-title { font-size: 2rem; font-weight: bold; color: #0d3e4c; margin-bottom: 20px;}
+    .about-text { font-size: 1.1rem; color: #2e4a56; line-height: 1.8;}
+    .services { margin-top: 80px; padding: 50px; background: #f9f9f9; border-radius: 18px;}
+    .services-title { font-size: 2rem; font-weight: bold; color: #0d3e4c; margin-bottom: 30px; text-align: center;}
+    .services-list { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;}
+    .service-item { flex: 1 1 300px; padding: 20px; background: #18818622; border: 2px solid #18818644; border-radius: 12px; text-align: center;}
+    .service-item h3 { color: #188186; margin-bottom: 10px;}
+    .service-item p { color: #2e4a56; font-size: 1rem;}
+    .skills { margin-top: 80px; padding: 50px; background: #eef8fa; border-radius: 18px; text-align: center;}
+    .skills-title { font-size: 2rem; font-weight: bold; color: #0d3e4c; margin-bottom: 30px;}
+    .skills-list { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;}
+    .skill-item { padding: 15px 25px; background: #18818622; border: 2px solid #18818644; border-radius: 10px; font-size: 1.1rem; color: #1c3c50; font-weight: 500; transition: 0.3s;}
+    .skill-item:hover { background: #188186; color: #fff; border-color: #188186;}
+    .certificates { margin-top: 80px; padding: 50px; background: #f9f9f9; border-radius: 18px;}
+    .certificates-title { font-size: 2rem; font-weight: bold; color: #0d3e4c; margin-bottom: 30px; text-align: center;}
+    .certificates-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;}
+    .certificate-item { background: #fff; border: 2px solid #18818644; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);}
+    .certificate-item img { width: 100%; height: auto; display: block;}
+    .certificate-caption { padding: 10px; text-align: center; color: #2e4a56; font-size: 1rem;}
+    .social-links a { margin:0 12px; color:#188186; font-size:2rem; transition: 0.2s;}
+    .social-links a:hover { color:#0d3e4c;}
+    @media (max-width: 850px) {
+      .hero { flex-direction: column; gap: 21px; }
+      .circle-img { margin-bottom: 20px;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <div class="logo">Shahzuu</div>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Skill</li>
+        <li>Certificates</li>
+      </ul>
+      <button class="btn">Let's Talk</button>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <div class="hero">
+      <div class="hero-content">
+        <div class="hero-title">Hey, I’m Shahzeb Khan</div>
+        <div class="hero-bio">A passionate web developer and Python programmer.</div>
+        <div class="hero-desc">
+          I create smart, efficient solutions that bring ideas to life. With a keen interest in AI, automation, and emerging tech, I’m always exploring ways to innovate and make an impact.
+        </div>
+        <div class="hero-btns">
+          <button class="btn">Learn More</button>
+          <button class="btn" style="background:#dcdcdc; color:#188186;">Hire Me</button>
+        </div>
+      </div>
+      <div class="circle-img">
+        <img src="shahzebkhanprofile.jpg" alt="Shahzeb Khan">
+      </div>
+    </div>
+
+
+    <!-- About -->
+    <div class="about" id="about">
+      <div class="about-title">About Me</div>
+      <div class="about-text">
+        I’m <b>Shahzeb Khan</b>, a dedicated <b>web developer</b> and <b>Python programmer</b> who loves turning creative ideas into real-world digital solutions.  
+        <br><br>
+        My journey started with a curiosity for technology, and over time I have built skills in <b>front-end development, back-end logic, and automation</b>.  
+        <br><br>
+        Currently, I’m also exploring <b>AI, data science, and automation tools</b> to push my capabilities further. My goal is simple: <b>to innovate, learn continuously, and make a difference</b> with technology.  
+      </div>
+    </div>
+
+
+    <!-- Services -->
+    <div class="services" id="services">
+      <div class="services-title">My Services</div>
+      <div class="services-list">
+        <div class="service-item">
+          <h3>Website Development</h3>
+          <p>Building modern, responsive, and user-friendly websites using HTML, CSS, JavaScript, and frameworks.</p>
+        </div>
+        <div class="service-item">
+          <h3>Python Script Development</h3>
+          <p>Custom Python scripts for automation, data analysis, and unique business solutions.</p>
+        </div>
+        <div class="service-item">
+          <h3>WhatsApp Automation Bot</h3>
+          <p>Automated messaging and business workflows on WhatsApp to handle orders, queries, and updates efficiently.</p>
+        </div>
+        <div class="service-item">
+          <h3>Telegram Bot Development</h3>
+          <p>Smart and scalable Telegram bots for automation, communities, and business solutions.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Skills -->
+    <div class="skills" id="skills">
+      <div class="skills-title">My Skills</div>
+      <div class="skills-list">
+        <div class="skill-item">Web Development</div>
+        <div class="skill-item">Git & GitHub</div>
+        <div class="skill-item">Python</div>
+        <div class="skill-item">WhatsApp automation</div>
+        <div class="skill-item">Telegram automation</div>
+      </div>
+    </div>
+
+
+    <!-- Certificates -->
+    <div class="certificates" id="certificates">
+      <div class="certificates-title">My Certificates</div>
+      <div class="certificates-grid">
+        <div class="certificate-item">
+          <img src="python certificate.jpg" alt="My Certificate">
+          <div class="certificate-caption">Python Programming</div>
+        </div>
+        <div class="certificate-item">
+          <img src="git.jpg" alt="My Certificate">
+          <div class="certificate-caption">Git</div>
+        </div>
+      </div>
+
+
+      <!-- Contact -->
+      <div class="contact" id="contact" style="margin-top:80px; padding:50px; background:#eef8fa; border-radius:18px;">
+        <div class="contact-title" style="font-size:2rem; font-weight:bold; color:#0d3e4c; margin-bottom:30px; text-align:center;">Contact Me</div>
+        <div class="contact-content" style="max-width:700px; margin:auto; display:flex; flex-direction:column; gap:20px;">
+          <input type="text" placeholder="Your Name" style="padding:14px 20px; border-radius:8px; border:1px solid #18818644; font-size:1rem; width:100%;">
+          <input type="email" placeholder="Your Email" style="padding:14px 20px; border-radius:8px; border:1px solid #18818644; font-size:1rem; width:100%;">
+          <textarea placeholder="Your Message" rows="6" style="padding:14px 20px; border-radius:8px; border:1px solid #18818644; font-size:1rem; width:100%;"></textarea>
+          <button class="btn" style="width:150px; align-self:center;">Send Message</button>
+          <div style="text-align:center; margin-top:15px; color:#2e4a56;">
+            Or reach me directly via: <br>
+            <b>Email:</b> <a href="mailto:shahzebkhan8572@gmail.com">shahzebkhan8572@gmail.com</a> <br>
+            <b>Phone/WhatsApp:</b> +91 9627507597
+          </div>
+          <!-- Social Accounts -->
+          <div class="social-links" style="text-align:center; margin-top:20px;">
+            <a href="https://www.facebook.com/shahzebkhan" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/_shahzeb.py?igsh=MWM2aGdsejV6YTliOA==" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/shahzebxkhan" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/shahzuu" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
